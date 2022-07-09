@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class MessageView extends React.Component {
     render() {
@@ -21,6 +22,10 @@ class MessageView extends React.Component {
             </div>
         )
     }
+}
+
+MessageView.propTypes = {
+    message: PropTypes.object.isRequired
 }
 
 export default MessageView;
