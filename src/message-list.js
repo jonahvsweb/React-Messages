@@ -13,7 +13,7 @@ class MessageList extends Component {
     render() {
         return(
             <div className="container">
-                <h1>List of Messages</h1>
+                <h1>Your Messages</h1>
                 <MessageView message={this.state.message} />
             </div>
         )
