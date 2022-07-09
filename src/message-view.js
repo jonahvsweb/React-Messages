@@ -1,27 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class MessageView extends React.Component {
-    render() {
-        const message = this.props.message;
+const MessageView = ({ message }) => {
 
-        return(
-            <div className="message">
-                <div className="field">
-                    <span className="label">From: </span>
-                    <span className="value">{message.from}</span>
-                </div>
-                <div className="field">
-                    <span className="label">Status: </span>
-                    <span className="value">{message.status}</span>
-                </div>
-                <div className="field content">
-                    <span className="label">Message: </span>
-                    <span className="value">{message.content}</span>
-                </div>
+    const { from, status, content } = message;
+
+    return(
+        <div className="message">
+            <div className="field">
+                <span className="label">From: </span>
+                <span className="value">{from}</span>
             </div>
-        )
-    }
+            <div className="field">
+                <span className="label">Status: </span>
+                <span className="value">{status}</span>
+            </div>
+            <div className="field content">
+                <span className="label">Message: </span>
+                <span className="value">{content}</span>
+            </div>
+        </div>
+    );
 }
 
 MessageView.propTypes = {
